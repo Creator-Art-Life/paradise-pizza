@@ -17,7 +17,18 @@ const config = {
         "2xl": "1400px",
       },
     },
+    screens: {
+      'max-xs': { max: '480px' },
+      'max-sm': { max: '768px' },
+      'max-md': { max: '992px' },
+      'max-lg': { max: '1200px' },
+      'max-xl': { max: '1399px' },
+      'laptop': '1024px',
+    },
     extend: {
+      backgroundImage: {
+        'custom-radial': 'radial-gradient(64% 50% at 50% 50%, rgb(146, 114, 236) 0%, rgb(87, 43, 207) 100%)',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

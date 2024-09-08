@@ -6,7 +6,6 @@ import { signIn } from "next-auth/react";
 import React from "react";
 import { LoginForm } from "./forms/login-form";
 import { RegisterForm } from "./forms/register-form";
-// import { RegisterForm } from './forms/register-form';
 
 interface Props {
     open: boolean;
@@ -69,10 +68,9 @@ export const AuthModal: React.FC<Props> = ({ open, onClose }) => {
                 </div>
 
                 <Button variant="outline" onClick={onSwitchType} type="button" className="h-12">
-                    {type !== 'login' ? 'Войти' : 'Регистрация'}
+                    {type !== 'login' ? 'Login' : 'Register'}
                 </Button>
             </DialogContent>
         </Dialog>
-
     );
 };

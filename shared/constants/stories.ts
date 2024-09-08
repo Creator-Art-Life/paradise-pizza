@@ -1,5 +1,11 @@
 export const PizzaFest = {
     preview: '/assets/stories/preview/Pizza Fest.png',
+    items: {
+        first: '/assets/stories/items/1-1.webp',
+        second: '/assets/stories/items/1-2.webp',
+        third: '/assets/stories/items/1-3.webp',
+        fourth: '/assets/stories/items/1-4.webp',
+    }
 };
 
 export const Eyes = {

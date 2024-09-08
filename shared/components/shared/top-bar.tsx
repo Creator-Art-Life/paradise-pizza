@@ -4,7 +4,6 @@ import { SortPopup } from "./sort-popup";
 import { Categories } from "./categories";
 import { Container } from "./container";
 import { Category } from "@prisma/client";
-import { categories } from "@/prisma/constants";
 
 interface Props {
     categories: Category[];
@@ -14,9 +13,9 @@ interface Props {
 export const TopBar: React.FC<Props> = ({categories, className }) => {
     return (
         <div className={cn('sticky top-0 bg-white py-5 shadow-lg shadow-black/5 z-10', className)}>
-            <Container className="flex items-center justify-between ">
+            <Container className="flex items-center justify-between max-xl:px-4">
                 <Categories items={categories}/>
-                <SortPopup />
+                <SortPopup className="max-xl:mr-4 max-md:hidden"/>
             </Container>
         </div>
     );

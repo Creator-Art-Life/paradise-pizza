@@ -15,14 +15,14 @@ interface Props {
 
 export const Categories: React.FC<Props> = ({items,  className }) => {
     const categoryActiveId = useCategoryStore((state) => state.activeId)
-    console.log(categoryActiveId);
     return (
-        <div className={cn('inline-flex gap-1 bg-gray-50 p-1 rounded-2xl', className)}>
+        <div className={cn('inline-flex gap-1 bg-gray-50 p-1 rounded-2xl overflow-x-auto whitespace-nowrap max-sm:w-full', className)}>
             {
                 items.map(({name, id}, index) => (
                     <a className={cn(
                         'flex items-center font-bold h-11 rounded-2xl px-5',
                         categoryActiveId === id && 'bg-white shadow-md shadow-gray-200 text-primary',
+                        'max-md:h-9 max-md:px-3 max-md:text-sm' // Стили для уменьшения на max-md
                     )}
                     href={`/#${name}`}
                     key={index}>

@@ -1,4 +1,4 @@
-import { Container, Title, Categories, SortPopup, Filters, TopBar, Stories } from "@/shared/components/shared";
+import { Container, Title, Filters, TopBar, Stories } from "@/shared/components/shared";
 import { ProductsGroupList } from "@/shared/components/shared/products-group-list";
 import { Suspense } from "react";
 import { GetSearchParams, findPizzas } from "@/shared/lib/find-pizzas";
@@ -8,18 +8,18 @@ export default async function Home({ searchParams }: { searchParams: GetSearchPa
   return (
     <>
       <Container className="mt-6">
-        <Title text="All pizzas" size="lg" className="font-extrabold"/>
+        <Title text="All pizzas" size="lg" className="font-extrabold max-xl:ml-6 max-md:text-2xl"/>
       </Container>
 
       <TopBar categories={categories.filter((category) => category.products.length > 0)} />
 
-      <Stories />
+      <Stories className="max-md:hidden"/>
 
       <Container className="mt-10 pb-14">
         <div className="flex gap-[60px]">
 
           {/* Фильтрация */}
-          <div className="w-[250px]">
+          <div className="w-[15.625rem] max-xl:ml-6 max-md:hidden">
             <Suspense>
               <Filters />
             </Suspense>

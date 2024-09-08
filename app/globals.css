@@ -92,3 +92,61 @@ html {
 #nprogress .spinner-icon {
   @apply border-t-primary border-l-primary !important;
 }
+
+/* Скрыть стандартный скроллбар */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Если хочешь кастомизировать скроллбар */
+.categories-container {
+  scrollbar-width: thin; /* Для Firefox */
+}
+
+.categories-container::-webkit-scrollbar {
+  height: 8px; /* Высота скроллбара */
+}
+
+.categories-container::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Цвет ползунка */
+  border-radius: 5px;
+}
+
+.categories-container::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Цвет фона скроллбара */
+}
+
+.star {
+  font-size: 17px; /* Одинаковый размер шрифта для всех звёзд */
+}
+
+.half-star {
+  background: linear-gradient(to right, #ffd200 50%, #ccc 50%);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.popup-container {
+  position: relative;
+  background-color: #373535;
+}
+
+/* Треугольник */
+.popup-container::before {
+  content: "";
+  position: absolute;
+  top: -8px; /* Расположение треугольника */
+  left: 50%;  /* Центрирование треугольника */
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 10px solid #373535; /* Цвет треугольника, такой же как фон */
+}

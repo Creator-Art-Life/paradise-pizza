@@ -6,7 +6,6 @@ import { Search } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 import { useClickAway, useDebounce } from 'react-use';
-import { Pizzas } from './products';
 import { Api } from '@/shared/services/api-client';
 
 interface Props {
