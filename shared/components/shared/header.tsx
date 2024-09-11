@@ -53,6 +53,19 @@ export const Header: React.FC<Props> = ({ hasSearch = true, hasCart = true, clas
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
+
+    React.useEffect(() => {
+        if (menuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        return () => {
+            // Убрать блокировку скролла при размонтировании компонента
+            document.body.style.overflow = '';
+        };
+    }, [menuOpen]);
     
     const handleMenuClick = () => {
     setMenuOpen(prev => !prev);

@@ -28,6 +28,9 @@ export { InfoBlock } from './info-block';
 export { ProfileForm } from './profile-form';
 export { Stories } from './stories';
 export { Article } from './article';
+export { ContactInfo } from './contact-info';
+export { SearchRes } from './search-res';
+export { ContactSocial } from './contact-social'; 
 
 export * from './navbar';
 export * from './email-temapltes';

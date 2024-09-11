@@ -30,8 +30,8 @@ export const PopupInfo: React.FC<PopupInfoProps> = ({ onClose }) => {
                 <span className="star half-star">⭐</span>
                 </div>
             </div>
-            <p className="text-sm text-gray-400 mt-2">21265 оценок</p>
-            <p className="text-sm text-gray-400">Оценить заказ можно в мобильном приложении</p>
+            <p className="text-sm text-gray-400 mt-2">2126 ratings</p>
+            <p className="text-sm text-gray-400">You can rate your order in the mobile app</p>
             </div>
         </div>
     );

@@ -6,15 +6,15 @@ interface Props {
     onClick: () => void;
 }
 
-export const Discount: React.FC<Props> = ({ className, onClick }) => {
+export const About: React.FC<Props> = ({ className, onClick }) => {
     return (
         <div className={className}>
-            <Link href='/bonusactions'>
+            <Link href={'/about'}>
                 <button
-                    className="text-white bg-black py-4 text-xl"
+                    className="text-white bg-black py-4 mr-56 text-xl"
                     onClick={onClick}
                 >
-                    <b>Discounts</b>
+                    <b>About Us</b>
                 </button>
             </Link>
         </div>

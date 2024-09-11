@@ -1,6 +1,6 @@
 import { Info, MapPin } from 'lucide-react';
 import React from 'react';
-import { PopupInfo } from '.';
+import { CitySearchPanel, PopupInfo } from '.';
 
 interface Props {
     className?: string;
@@ -8,16 +8,20 @@ interface Props {
 
 export const InfoMenu: React.FC<Props> = ({ className }) => {
     const [isInfoOpen, setIsInfoOpen] = React.useState(false);
+    const [city, setCity] = React.useState('New-York'); 
 
     const toggleInfo = () => setIsInfoOpen(prev => !prev);
 
+    const handleCityChange = (selectedCity: string) => {
+        setCity(selectedCity);
+    };
     return (
         <div className={`mt-4 w-full flex flex-col items-start px-7 text-white ${className}`}>
             <div className="flex items-center gap-2">
                 <MapPin />
                 <div>
-                    <p className="text-lg">New-York</p>
-                    <button className="text-sm text-gray-400">Edit</button>
+                    <p className="text-lg">{city}</p>
+                    <CitySearchPanel onCitySelect={handleCityChange} />
                     <div className="w-96 border-b border-gray-600 mt-2" />
                 </div>
             </div>
