@@ -3,7 +3,7 @@
 import React, { useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { About, Auth, Contact, ContactBlock, Discount, InfoMenu, SearchPanel } from '.';
+import { About, Auth, Cart, Contact, ContactBlock, Discount, InfoMenu, SearchPanel } from '.';
 
 interface NavbarProps {
     setMenuOpen: (open: boolean) => void;
@@ -40,10 +40,11 @@ export const Navbar: React.FC<NavbarProps> = ({ setMenuOpen }) => {
             <div className="flex flex-col -space-y-2 mr-3">
                 <Auth onClick={() => {setTimeout(() => setMenuOpen(false), 500); }}/>
                 <SearchPanel />
+                <Cart />
                 <Discount onClick={() => {setTimeout(() => setMenuOpen(false), 600); }}/>
                 <Contact onClick={() => {setTimeout(() => setMenuOpen(false), 600); }}/>
                 <About onClick={() => {setTimeout(() => setMenuOpen(false), 600); }}/>
-                <ContactBlock /> 
+                <ContactBlock />
             </div>
         </div>
     );

@@ -20,8 +20,8 @@ export const Auth: React.FC<Props> = ({ className, onClick }) => {
                     onClick={() => setOpenAuthModal(true)} // Открытие модального окна авторизации
                     className="text-white bg-black py-4 mr-56 text-xl"
                 >
-                    <User size={18} className="inline-block mr-2" />
                     <b>Login</b>
+                    {/* <User size={18} className="inline-block ml-2" /> */}
                 </button>
             ) : (
                 <Link href="/profile">
@@ -29,8 +29,8 @@ export const Auth: React.FC<Props> = ({ className, onClick }) => {
                         className="text-white bg-black py-4 mr-56 text-xl"
                         onClick={onClick}
                     >
-                        {/* <CircleUser size={18} className="inline-block mr-2" /> */}
                         <b>Profile</b>
+                        {/* <CircleUser size={18} className="inline-block ml-2" /> */}
                     </button>
                 </Link>
             )}

@@ -91,14 +91,15 @@ export const Header: React.FC<Props> = ({ hasSearch = true, hasCart = true, clas
                 {menuOpen && <Navbar setMenuOpen={setMenuOpen} />}
 
 
-                <div className="flex rounded-2xl flex-1 justify-between relative h-11 z-30 max-md:hidden "> 
-                    { hasSearch && (
+                <div className="flex items-center justify-end relative h-11 z-30 flex-1 max-md:hidden"> 
+                    {hasSearch && (
                         <div className="mx-10 flex-1">
                             <SearchInput />
                         </div>
                     )}
-
-                    <div className="flex items-center gap-3 max-xl:mr-4">
+                    
+                    {/* Блок авторизации всегда будет справа */}
+                    <div className={`flex items-center gap-3 ${hasSearch || hasCart ? 'ml-10' : 'ml-auto'} max-xl:mr-4`}>
                         <AuthModal open={openAuthModal} onClose={() => setOpenAuthModal(false)} />
                         <ProfileButton onClickSignIn={() => setOpenAuthModal(true)} />
                         {hasCart && (<CartButton />)}

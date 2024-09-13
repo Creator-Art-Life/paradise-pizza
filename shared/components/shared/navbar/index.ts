@@ -8,3 +8,4 @@ export { Contact } from './contact';
 export { About } from './about'
 export { ContactBlock } from './contact-block';
 export { CitySearchPanel } from './city-search-panel';
+export { Cart } from './cart';

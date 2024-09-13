@@ -50,6 +50,7 @@ export const SearchPanel: React.FC<Props> = ({ className }) => {
                 className="text-white bg-black py-4 mr-56 text-xl"
             >
                 <b>Search</b>
+                {/* <Search size={18} className="inline-block ml-2" /> */}
             </button>
 
             {/* Modal with search input */}
