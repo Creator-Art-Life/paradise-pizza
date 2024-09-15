@@ -23,19 +23,17 @@ export const ChooseProductForm: React.FC<Props> = ({
     price,
     className
 }) => {
-    
-
     return (
-        <div  className={cn(className, 'flex flex-1')}>
-            <div className="flex items-center justify-center flex-1 relative w-full">
+        <div className={cn(className, 'flex flex-1 w-full h-full')}>
+            <div className="flex items-center justify-center flex-1 w-full h-full">
                 <img
                     src={imageUrl}
                     alt={name}
-                    className="relative left-2 top-2 transition-all z-10 duration-300 w-[350px] h-[350px]"
+                    className="object-cover w-[70%] h-[70%]"
                 />
             </div>
 
-            <div className="w-[490px] bg-[#f7f6f5] p-7">
+            <div className="w-[490px] bg-[#f7f6f5] p-7 h-full flex flex-col justify-between">
                 <Title text={name} size="md" className="font-extrabold mb-1" />
                 <Button
                     loading={loading}

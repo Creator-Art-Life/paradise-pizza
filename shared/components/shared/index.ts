@@ -30,7 +30,10 @@ export { Stories } from './stories';
 export { Article } from './article';
 export { ContactInfo } from './contact-info';
 export { SearchRes } from './search-res';
-export { ContactSocial } from './contact-social'; 
+export { ContactSocial } from './contact-social';
+export { ProductFormMobile } from './product-form-mobile';
+export { ChoosePizzaFormMobile } from './choose-pizza-mobile';
+export { ChooseProductFormMobile } from './choose-product-form-mobile';
 
 export * from './navbar';
 export * from './email-temapltes';

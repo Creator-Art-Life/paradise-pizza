@@ -1,4 +1,4 @@
-import { Container, ProductForm, } from "@/shared/components/shared";
+import { Container, ProductForm, ProductFormMobile, } from "@/shared/components/shared";
 import { prisma } from "@/prisma/prisma-client"
 import { notFound } from "next/navigation";
 
@@ -25,8 +25,14 @@ export default async function ProductPage({ params: { id } }: { params: { id: st
     }
 
     return (
-        <Container className="flex flex-col my-10">
-            <ProductForm product={product} />
+      <>
+        <Container className="flex flex-col my-10 max-md:hidden">
+            <ProductForm product={product}/>
         </Container>
+
+        <Container className="flex flex-col my-10 laptop:hidden">
+          <ProductFormMobile product={product}/>
+        </Container>
+      </>
     )
 }
